@@ -1,0 +1,183 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Friends For Animal</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/custom-theme/jquery-ui-1.9.2.custom.css' %}"> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+</head>
+<body>
+
+
+<!-- MainPage Starts Here -->
+<div class="row" id="mainPage">
+  <div class="col-md-2" style="background-color: grey;"></div>
+
+
+    <!-- MainPage Contents Start -->
+    <div class="col-md-8">
+      
+    
+    <div class="mainPageBody" style="background-color: #3db80b99;">
+      <!-- LogoHeader Start -->
+      <div class="logoHeader" style="margin-bottom: 20px;">
+        <div class="container-fluid">
+          <h3 style="margin-bottom: 0px;"><strong>FRIENDS FOR ANIMALS</strong></h3>
+        </div>  
+      </div>
+      <!-- LogoHeader End -->
+      <!-- Navigation Bar Start -->
+      <div class="container-fluid" style="width: 100%; background-color: yellow;">
+        <nav class="navbar navbar-light justify-content-between navbar-expand">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav justify-content-between">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'events' %}">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'medications' %}">PET Medication</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'volunteers' %}">Volunteer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'adoptions' %}">PET Adoption</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'donations' %}">Donation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact US</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Navigation Bar End -->
+
+      <!-- SlideShow Start -->
+      <div class="slideShowPanel card" style="margin-top: 20px; border-bottom: 1px red; height: 300px;">
+        <img src="{{ MEDIA_URL }}images/bigImage.jpg" style="width: 100%" style="border-bottom: 1px red;">  
+      </div>
+      <!-- SlideShow End -->
+
+      <!-- Three Buttons Panel Start -->
+      <div class="threeButtons" style="margin-top: 10px; margin-top: -50px;">
+        <div class="row">
+          <div class="col-md-4">
+            ​<a href="{% url 'medications' %}">
+              <img class="image-circle" src="{{ MEDIA_URL }}images/blackImage.svg" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 20px;" >
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            ​<a href="{% url 'adoptions' %}">
+              <img class="image-circle" src="{{ MEDIA_URL }}images/blackImage.svg" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 20px;" >
+            </a>
+          </div>
+
+          <div class="col-md-4" id="thirdButton">
+              <a href="{% url 'donations' %}">
+              <img class="image-circle" src="{{ MEDIA_URL }}images/blackImage.svg" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 20px;" >
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <!-- Three Buttons Panel End -->
+
+      <!-- Extended Page Start -->
+      {% block extendedPage %}
+
+      {% endblock %}
+      <!-- Extended Page End -->
+    </div>
+  <!-- MainPage Contents End -->
+
+  <!-- Footer Start -->
+  <div class="card" id="footer" style="background-color: grey; margin-top: 20px;">
+    <div class="row">
+      
+      <div class="col-md-2">
+        <ul>
+          <li>
+            <a href="{% url 'home' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'about' %}">About US</a>
+          </li>
+          <li>
+            <a href="{% url 'events' %}">Events</a>
+          </li>
+        </ul>  
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li>
+            <a href="{% url 'medications' %}">PET Medication</a>
+          </li>
+          <li>
+            <a href="{% url 'volunteers' %}">Volunteer</a>
+          </li>
+          <li>
+            <a href="{% url 'contact' %}">Contact US</a>
+          </li>
+        </ul>  
+      </div>
+
+      <div class="col-md-4">
+        <h5 style="margin-left: -30px; color : white;">&copy;Friends of Animals, India </h5>
+        <p style="margin-left: -30px; color : white;">All copyrights are reserved</p>
+      </div>
+
+      <div class="col-md-5">
+        
+      </div>
+
+
+
+    </div>
+  </div>
+  <!-- Footer End -->
+  </div>
+
+  <div class="col-md-2" style="background-color: grey;"></div>
+</div>
+<!-- MainPage Ends Here -->
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<!-- Load Facebook SDK for JavaScript -->
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+web: gunicorn friends_for_animals.production_wsgi --log-file -

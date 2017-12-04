@@ -1,0 +1,54 @@
+{% extends './base.html' %}
+
+{% block extendedPage %}
+<div class="homeContents" style="margin-top: 20px;">
+	<div class="row">
+		
+		<div class="col-md-3" style="margin-left: 10px; margin-bottom: 20px;">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text"></p>
+					
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6" style="margin-bottom: 20px; margin-left: -10px;">
+			<div class="card">
+				<div class="card-body">
+					<div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -20px;">
+						<h5 class="card-title">Contact US</h5>
+						<hr>	
+					</div>
+					
+					
+					<div class="card-text" style="font-size: .8em; margin-top: 30px;">	
+						<div class="head"><strong>Registered Address</strong></div>
+						<p>
+							
+								C-201, Nehru Hall of Residence,<br/>
+								Indian Institute of Technology Kharagpur,<br/>
+								Kharagpur, 721302<br/>
+								West Bengal, India
+							
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3" style=" margin-bottom: 20px; margin-left: -10px; padding-left: -20px">
+			<div class="card">
+			<div class="card-body">
+					<img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;">
+					<h5 class="card-title" style="font-size: .8em;">It's not just funds and homes that our dear animals need. You can contribute your time and energy to bring about a difference.</h5>
+					<a class="card-text" href="{% url 'volunteers' %}">
+
+						<button class="btn btn-block btn-warning" style="border-radius: 5px;">Signup Here</button>
+					</a>
+			
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

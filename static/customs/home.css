@@ -1,0 +1,23 @@
+.mainPage{
+	border: 1px 1px red; 
+}
+
+.logoHeader{
+	margin-bottom: 100px;
+}
+
+.mainPageBody>div>nav>div>ul>li{
+	margin-left: 10px;
+}
+
+#thirdButton{
+	position: relative;
+}
+
+#footer>div>div>ul>li>a{
+	color: yellow;
+}
+
+.third-image-text{position:absolute; bottom:0; font-size:24px; font-family:"vedana"; background:rgba(118, 126, 118, 0.5);
+width:40%; text-align:center;}
+.third-image-text a{font-size:16px; color:#b92b27;}

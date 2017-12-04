@@ -1,0 +1,62 @@
+{% extends './base.html' %}
+
+{% block extendedPage %}
+<div class="homeContents" style="margin-top: 20px;">
+	<div class="row">
+		<div class="col-md-12" id="onlyButton">
+			<div class="text-center" style="margin-bottom: 40px; ">
+				<a href="">
+					<button class="btn btn-lg btn-danger">FRIENDS FOR ANIMAL</button>
+				</a>
+			</div>
+		</div>
+		<div class="col-md-3" style="margin-left: 30px; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;">
+				<h5 class="card-title" style="font-size: .8em;">It's not just funds and homes that our dear animals need. You can contribute your time and energy to bring about a difference.</h5>
+				<a class="card-text" href="{% url 'volunteers' %}">
+
+					<button class="btn btn-block btn-warning" style="border-radius: 5px;">Signup Here</button>
+				</a>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-5" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -35px;">
+					<h4 class="card-title"><strong>Latest Events and Rescues</strong></h4>	
+					<hr>
+				</div>
+			
+				<div class="homeCotents" style="font-size: 1em; margin-top: 30px;">
+					<p class="card-text">
+						<div class="card">
+							<div class="card-title">
+								<a href="">Event News 1</a>
+							</div>
+							<p>News Texts</p>
+						</div>
+						<div class="card" style="margin-top: 10px;">
+							<div class="card-title">
+								<a href="">Rescue News 1</a>
+							</div>
+							<p>News Texts</p>
+						</div>
+					</p>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">Contents</h5>
+				<p class="card-text">text</p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

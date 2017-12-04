@@ -1,0 +1,64 @@
+{% extends './base.html' %}
+
+{% block extendedPage %}
+<div class="homeContents" style="margin-top: 20px;">
+	<div class="row">
+		
+		<div class="col-md-3" style="margin-left: 30px; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;">
+				<h5 class="card-title" style="font-size: .8em;">It's not just funds and homes that our dear animals need. You can contribute your time and energy to bring about a difference.</h5>
+				<a class="card-text" href="{% url 'volunteers' %}">
+
+					<button class="btn btn-block btn-warning" style="border-radius: 5px;">Signup Here</button>
+				</a>
+				
+			</div>
+			</div>
+		</div>
+		<div class="col-md-5" style="margin-left: 10px; width: 80%; margin-bottom: 20px; font-size: .8em; font-family: sans-serif;">
+			<div class="card">
+			<div class="card-body" >
+				<div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -35px;">
+					<h5 class="card-title">About US</h5>
+					<hr>
+				</div>
+				
+				
+				<br/>
+				<div class="ourMission" style="font-size: 1em; margin-top: 30px;">
+					<strong>WE ARE THE VANGUARD OF THIS SOCIAL MOVEMENT. WE ARE MAKING HISTORY.</strong>
+					<hr>
+					<p class="card-text">
+						<strong>Mission</strong>
+						<br/>
+						Our main motive is to promote the importance of the stray animals so that they can get the same love and care like other stray animals in India.
+					</p>
+					<br/>
+					<p class="card-text">
+						<strong>Our Story</strong>
+						<br/>
+						FOR ALL EARTHLINGS--- BUT FIRST AND FOREMOST, FOR THE ANIMALS--- Because, they are suffering such barbaric injustices, and torture. They are not here for our use and abuse, and without them, this planet would not feel like a home.
+						<br/>
+						This page is created, to help inform, inspire, and synergize our energies, so we can find ways to help free the animals from their horrific holocaust. It is for all of you that feel a calling to protect animals and are fighting to allow them the freedoms that are their birth right. We give you all the platform where you can inform us that animal need first-aid, treatment, care, safety and we will provide them proper treatment with safety.
+						<br/>
+
+						Fighting for the protection of animals, this planet, and the marginalized, devoted to help them be free, of the corporations that are bent on destruction
+						Like our page to stay updated on the latest news, urgent alerts & ways to help animals!
+					</p>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<p class="card-text"></p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

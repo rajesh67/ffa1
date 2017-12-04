@@ -1,0 +1,58 @@
+{% extends './base.html' %}
+
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+
+{% block extendedPage %}
+<div class="homeContents" style="margin-top: 20px;">
+	<div class="row">
+
+		<div class="col-md-3" style="margin-left: 30px; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<p class="card-text"></p>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-5" style="margin-left: 10px; width: 80%; margin-bottom: 20px; font-size: .8em;">
+			<div class="card">
+			<div class="card-body">
+				<div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -35px;">
+				<h5 class="card-title">Volunteers</h5>
+				<hr>
+				</div>
+				
+				<div class="volunteerContents" style="font-size: 1em; margin-top: 30px;">
+					<h5 style="font-size: 1em;"><strong>Fill this form to become an active volunteer of our organization:</strong></h5>
+					<form class="form-horizontal">
+						{% csrf_token %}
+						{% bootstrap_form form %}
+						<button class="btn btn-primary" type="submit">Submit Volunteer Request</button>
+					</form>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<p class="card-text">
+					
+				</p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
