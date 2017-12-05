@@ -36,7 +36,7 @@
               <div class="logoImages">
               <img src="{{ MEDIA_URL }}images/header_image_org.png" width="200px" height="130px">
             </a>
-              <img src="{{ MEDIA_URL }}images/final_logo.png" width="100px" height="100px" style="margin-left: 0px; margin-top: 2px; margin-bottom: -1px;">
+              <img src="{{ MEDIA_URL }}images/new_logo.png" width="100px" height="100px" style="margin-left: 0px; margin-top: 2px; margin-bottom: -1px;">
             </div>
           </div>
         </div>  
@@ -88,8 +88,10 @@
       <!-- SlideShow End -->
 
       <!-- Three Buttons Panel Start -->
+      
       <div class="threeButtons" style="margin-top: 10px; margin-top: -50px;">
         <div class="row">
+          {% block buttons %}
           <div class="col-md-4">
             ​<a href="{% url 'medications' %}">
               <img class="image-circle" src="{{ MEDIA_URL }}images/medication.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 20px;" >
@@ -107,9 +109,10 @@
               <img class="image-circle" src="{{ MEDIA_URL }}images/blackImage.svg" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 20px;" >
             </a>
           </div>
-
+          {% endblock %}
         </div>
       </div>
+      
       <!-- Three Buttons Panel End -->
 
       <!-- Extended Page Start -->

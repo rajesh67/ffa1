@@ -1,5 +1,23 @@
 {% extends './base.html' %}
 
+{% block buttons %}
+<div class="col-md-4">
+	​<a href="{% url 'medications' %}">
+	  <img class="image-circle" src="{{ MEDIA_URL }}images/medication.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 20px;" >
+	</a>
+</div>
+
+<div class="col-md-4">
+
+</div>
+
+<div class="col-md-4" id="thirdButton">
+  <a href="{% url 'donations' %}">
+  <img class="image-circle" src="{{ MEDIA_URL }}images/blackImage.svg" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 20px;" >
+</a>
+</div>
+{% endblock %}
+
 {% block extendedPage %}
 <div class="homeContents" style="margin-top: 20px;">
 	<div class="row">
