@@ -1,4 +1,4 @@
-{% extends './base.html' %}
+﻿{% extends './base.html' %}
 
 {% block buttons %}
 <style>
@@ -31,7 +31,10 @@ tr:nth-child(even) {
 </a>
 </div>
 
-<div class="col-md-4" id="thirdButton">
+<div class="col-md-3" id="thirdButton">
+  <a href="{% url 'donations' %}">
+  <img class="image-circle" src="{{ MEDIA_URL }}images/donation.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 10px;" >
+</a>
 </div>
 {% endblock %}
 
@@ -39,10 +42,10 @@ tr:nth-child(even) {
 <div class="homeContents" style="margin-top: 20px;">
 	<div class="row">
 		
-		<div class="col-md-3" style="margin-left: 30px; width: 80%; margin-bottom: 20px;">
+		<div class="col-md-2" style="margin-left: 30px; width: 80%; margin-bottom: 20px;">
 			<div class="card">
 			<div class="card-body">
-				<img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;">
+				<img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;" width="150%">
 				<h5 class="card-title" style="font-size: .8em;">It's not just funds and homes that our dear animals need. You can contribute your time and energy to bring about a difference.</h5>
 				<a class="card-text" href="{% url 'volunteers' %}">
 
@@ -52,7 +55,7 @@ tr:nth-child(even) {
 			</div>
 			</div>
 		</div>
-		<div class="col-md-5" style="margin-left: 10px; width: 80%; margin-bottom: 20px; font-size: 1em; font-family: sans-serif;">
+		<div class="col-md-7" style="margin-left: 10px; width: 80%; margin-bottom: 20px; font-size: 1em; font-family: sans-serif;">
 			<div class="card">
 			<div class="card-body">
 				<div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -35px;">
@@ -93,17 +96,34 @@ tr:nth-child(even) {
 							</tr>
 							<tr>
 								<td>4</td>
-								<td>soham Gosh</td>
+								<td>soham Ghosh</td>
 								<td>9674765951</td>
 								<td>Rs. 111</td>
 							</tr>
 							<tr>
 								<td>5</td>
-								<td>Hitesh Ch</td>
+								<td>Hitesh Chaudhary</td>
 								<td>7872841507</td>
 								<td>Rs. 111</td>
 							</tr>
-							
+							<tr>
+								<td>6</td>
+								<td>Rahul Rathore</td>
+								<td>7699011408</td>
+								<td>Rs. 111</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Amar Topo</td>
+								<td>7699011408</td>
+								<td>Rs. 111</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>Sagardeep Debbarma</td>
+								<td>9091402203</td>
+								<td>Rs. 111</td>
+							</tr>
 
 							<!-- /Headers -->
 						</table>
@@ -113,7 +133,7 @@ tr:nth-child(even) {
 			</div>
 			</div>
 		</div>
-		<div class="col-md-3" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+		<div class="col-md-2" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
 			<div class="card">
 			<div class="card-body">
 				<h5 class="card-title"></h5>
