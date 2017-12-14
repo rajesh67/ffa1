@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^contact/$', views.contact_us, name="contact"),
     url(r'^adoptions/$', views.adoptions, name="adoptions"),
     url(r'^donations/$', views.donations, name="donations"),
+    url(r'^donors/$', views.donors_list, name="donors-list"),
 
     url(r'^blogs/', include('blogs.urls'), name="blogs"),
 

@@ -1,4 +1,4 @@
-{% load static %}
+﻿{% load static %}
 
 <!doctype html>
 <html lang="en">
@@ -20,7 +20,7 @@
 
 <!-- MainPage Starts Here -->
 <div class="row" id="mainPage">
-  <div class="col-md-1" style="background-color: grey;"></div>
+  <div class="col-md-1" style=""></div>
 
 
     <!-- MainPage Contents Start -->
@@ -34,9 +34,9 @@
           <div class="logoHeader-text">
             <a href="/">
               <div class="logoImages">
-              <img src="{{ MEDIA_URL }}images/header_image_org.png" width="200px" height="130px">
+              <img src="{{ MEDIA_URL }}images/final_logo.png" width="40%" height="130px">
             </a>
-              <img src="{{ MEDIA_URL }}images/logo.png" width="100px" height="100px" style="margin-left: 0px; margin-top: 2px; margin-bottom: -1px;">
+             
             </div>
           </div>
         </div>  
@@ -55,7 +55,7 @@
                 <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}">About US</a>
+                <a class="nav-link" href="{% url 'about' %}">About FFA</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'events' %}">Events</a>
@@ -76,8 +76,16 @@
                 <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
               </li>
               <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link" href="{% url 'article-list' %}">Blogs</a>
+=======
+                <a class="nav-link" href="{% url 'donors-list' %}">Donors List</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact US</a>
+>>>>>>> 75e26e9e42d952195eddf718f7bacf1e5bc26501
+              </li>
+              
             </ul>
           </div>
         </nav>
@@ -106,7 +114,7 @@
             </div>
           </div>
         </div>
-        <img src="{{ MEDIA_URL }}images/bigImage.jpg" style="width: 75%; margin-top: -210px;" width="200px;">  
+        <img src="{{ MEDIA_URL }}images/poster_1.png" style="width: 75%; margin-top: -210px;" width="200px;">  
       </div>
       <!-- SlideShow End -->
 
@@ -148,7 +156,7 @@
   <!-- MainPage Contents End -->
 
   <!-- Footer Start -->
-  <div class="card" id="footer" style="background-color: grey; margin-top: 20px;">
+  <div class="container-fluid" id="footer" style="background-color: grey; margin-top: 20px;">
     <div class="row">
       
       <div class="col-md-2">
@@ -194,7 +202,7 @@
   <!-- Footer End -->
   </div>
 
-  <div class="col-md-1" style="background-color: grey;"></div>
+  <div class="col-md-1" style=""></div>
 </div>
 <!-- MainPage Ends Here -->
 
