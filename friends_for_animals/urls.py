@@ -31,5 +31,7 @@ urlpatterns = [
     url(r'^donations/$', views.donations, name="donations"),
     url(r'^donors/$', views.donors_list, name="donors-list"),
 
+    url(r'^blogs/', include('blogs.urls'), name="blogs"),
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
