@@ -30,5 +30,7 @@ urlpatterns = [
     url(r'^adoptions/$', views.adoptions, name="adoptions"),
     url(r'^donations/$', views.donations, name="donations"),
 
+    url(r'^blogs/', include('blogs.urls'), name="blogs"),
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

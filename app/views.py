@@ -4,9 +4,10 @@ from __future__ import unicode_literals
 from django.shortcuts import render, render_to_response
 # Create your views here.
 from app.froms import VolunteerSignupForm
+from blogs.models import Article
 
 def index(request):
-	return render(request, 'home.html', {})
+	return render(request, 'home.html', {'object_list': Article.objects.all()})
 
 def about_us(request):
 	return render(request, 'about_us.html',{})
