@@ -28,3 +28,6 @@ def adoptions(request):
 
 def donations(request):
 	return render(request, 'donation.html',{})
+
+def donors_list(request):
+	return render(request, 'donors_list.html',{})

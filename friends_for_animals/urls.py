@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^contact/$', views.contact_us, name="contact"),
     url(r'^adoptions/$', views.adoptions, name="adoptions"),
     url(r'^donations/$', views.donations, name="donations"),
+    url(r'^donors/$', views.donors_list, name="donors-list"),
 
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,114 @@
+{% extends './base.html' %}
+
+{% block buttons %}
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<div class="col-md-3"></div>
+<div class="col-md-3">
+	​<a href="{% url 'medications' %}">
+	  <img class="image-circle" src="{{ MEDIA_URL }}images/medication.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 10px;" >
+	</a>
+</div>
+
+<div class="col-md-3">
+​<a href="{% url 'adoptions' %}">
+  <img class="image-circle" src="{{ MEDIA_URL }}images/adoption_new.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 10px;" >
+</a>
+</div>
+
+<div class="col-md-4" id="thirdButton">
+</div>
+{% endblock %}
+
+{% block extendedPage %}
+<div class="homeContents" style="margin-top: 20px;">
+	<div class="row">
+		
+		<div class="col-md-3" style="margin-left: 30px; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;">
+				<h5 class="card-title" style="font-size: .8em;">It's not just funds and homes that our dear animals need. You can contribute your time and energy to bring about a difference.</h5>
+				<a class="card-text" href="{% url 'volunteers' %}">
+
+					<button class="btn btn-block btn-warning" style="border-radius: 5px;">Signup Here</button>
+				</a>
+				
+			</div>
+			</div>
+		</div>
+		<div class="col-md-5" style="margin-left: 10px; width: 80%; margin-bottom: 20px; font-size: 1em; font-family: sans-serif;">
+			<div class="card">
+			<div class="card-body">
+				<div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -35px;">
+					<h5 class="card-title">Donors List</h5>
+					<hr>
+				</div>
+				<div class="donationContent" style="font-size: 1em; margin-top: 10%;">
+					<p class="card-text">
+						<strong>People Who have Donated in this Social Cause</strong>
+					</p>
+					<div class="donors">
+						<!-- Donors Liosst -->
+						<table>
+							<!-- Headers -->
+							<tr>
+								<th>Sl. No.</th>
+								<th>Donor Name</th>
+								<th>Contact No.</th>
+								<th>Donation Amount</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>Chandraket Singh</td>
+								<td>8961346194</td>
+								<td>Rs. 111</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Rajesh Kumar Meena</td>
+								<td>9547987423</td>
+								<td>Rs. 111</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Abhishek anand</td>
+								<td>8653675919</td>
+								<td>Rs. 111</td>
+							</tr>
+							<!-- /Headers -->
+						</table>
+						<!-- /endtable -->
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<p class="card-text">
+					
+				</p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
