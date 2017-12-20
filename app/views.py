@@ -5,9 +5,10 @@ from django.shortcuts import render, render_to_response
 # Create your views here.
 from app.froms import VolunteerSignupForm
 from blogs.models import Article
-from app.models import PageQuestion
+from app.models import PageQuestion, Donor
 from app.forms import QuestionForm, QuestionUpdateForm
 from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.base import View, TemplateView
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
@@ -80,8 +81,10 @@ class AdoptionUpdateView(UpdateView):
 	def form_valid(self, *args, **kwargs):
 		return super(AdoptionUpdateView, self).form_valid(*args, **kwargs)
 
-def donations(request):
-	return render(request, 'donation.html',{})
+class DonorListView(ListView):
+	model=Donor
+	template_name="donors_list.html"
 
-def donors_list(request):
-	return render(request, 'donors_list.html',{})
+	def get_context_data(self, *args, **kwargs):
+		context=super(DonorListView, self).get_context_data(*args, **kwargs)
+		return context

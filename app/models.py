@@ -24,3 +24,11 @@ class PageQuestion(models.Model):
 
 	def __str__(self):
 		return self.question
+
+class Donor(models.Model):
+	name=models.CharField(max_length=100)
+	email=models.CharField(max_length=250)
+	amount=models.PositiveIntegerField(default=111)
+
+	def __str__(self):
+		return self.name

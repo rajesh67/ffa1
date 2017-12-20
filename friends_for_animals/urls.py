@@ -34,7 +34,7 @@ urlpatterns = [
     # 
 
     url(r'^donations/$', views.DonationView.as_view(), name="donations"),
-    url(r'^donors/$', views.donors_list, name="donors-list"),
+    url(r'^donors/$', views.DonorListView.as_view(), name="donors-list"),
 
     url(r'^blogs/', include('blogs.urls'), name="blogs"),
 
