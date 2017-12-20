@@ -202,7 +202,7 @@
   <div class="container-fluid" id="footer" style="background-color: grey; margin-top: 20px;">
     <div class="row">
       
-      <div class="col-md-2">
+      <div class="col-sm-2">
         <ul>
           <li>
             <a href="{% url 'home' %}">Home</a>
@@ -215,7 +215,7 @@
           </li>
         </ul>  
       </div>
-      <div class="col-md-3">
+      <div class="col-sm-3">
         <ul>
           <li>
             <a href="{% url 'medications' %}">PET Medication</a>
@@ -229,13 +229,26 @@
         </ul>  
       </div>
 
-      <div class="col-md-4">
+      <div class="col-sm-4">
         <h5 style="margin-left: -30px; color : white;">&copy;Friends of Animals, India </h5>
         <p style="margin-left: -30px; color : white;">All copyrights are reserved</p>
       </div>
 
-      <div class="col-md-5">
-        
+      <div class="col-md-3">
+        <!-- Default dropup button -->
+        <div class="btn-group dropup">
+          <button type="button" class="btn btn-secondary">Chat With US?</button>
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" style="margin-right: 50%;">
+            <iframe
+              width="350"
+              height="430"
+              src="https://console.dialogflow.com/api-client/demo/embedded/57640174-37d5-476e-b95b-744271bc5d2b">
+          </iframe>
+          </div>
+        </div><!-- /Default Dropup button -->
       </div>
 
 
@@ -248,13 +261,8 @@
   <div class="col-md-1" style="">
     
   </div>
-  <div class="chatbot" style="margin-left: 70%; margin-top: -32%; z-index:5;">
-    <iframe
-      width="350"
-      height="430"
-      src="https://console.dialogflow.com/api-client/demo/embedded/57640174-37d5-476e-b95b-744271bc5d2b">
-  </iframe>
-  </div>
+
+  
 </div>
 <!-- MainPage Ends Here -->
 
