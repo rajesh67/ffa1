@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name="home"),
     url(r'^events/$', views.events, name="events"),
-    url(r'^medication/$', views.medication, name="medications"),
+    url(r'^medication/$', views.MedicationView.as_view(), name="medications"),
     url(r'^volunteers/$', views.volunteer, name="volunteers"),
     url(r'^about/$', views.about_us, name="about"),
     url(r'^contact/$', views.contact_us, name="contact"),
@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^adoptions/update/(?P<pk>\d+)/$', views.AdoptionCreateView.as_view(), name="update-adoption-question"),
     # 
 
-    url(r'^donations/$', views.donations, name="donations"),
+    url(r'^donations/$', views.DonationView.as_view(), name="donations"),
     url(r'^donors/$', views.donors_list, name="donors-list"),
 
     url(r'^blogs/', include('blogs.urls'), name="blogs"),

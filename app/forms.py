@@ -1,20 +1,20 @@
 from django import forms
 
-from app.models import AdoptionPageQuestion
+from app.models import PageQuestion
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
-class AdoptionQuestionForm(forms.ModelForm):
+class QuestionForm(forms.ModelForm):
 	class Meta:
-		model=AdoptionPageQuestion
+		model=PageQuestion
 		fields=('question', 'answer')
 		widgets={
 			'answer':SummernoteWidget(),
 		}
 
-class AdoptionQuestionUpdateForm(forms.ModelForm):
+class QuestionUpdateForm(forms.ModelForm):
 	class Meta:
-		model=AdoptionPageQuestion
+		model=PageQuestion
 		fields=('answer',)
 		widgets={
 			'answer':SummernoteWidget(),

@@ -45,7 +45,16 @@
 				</div>
 				<div class="donationContent" style="font-size: 1em; margin-top: 30px;">
 					<p class="card-text">
-						Why people should donate?
+						{% for question in questions %}
+
+							<div class="answer" style="margin-top: 5%;">
+								<h5><strong>{{question.question}}</strong></h5>
+								<div class="answer" style="margin-top: 20px;">
+									{{ question.answer|safe }}
+								</div>
+							</div>
+							<hr style="border: 1px dotted black;">
+						{% endfor %}
 					</p>
 				</div>
 			</div>

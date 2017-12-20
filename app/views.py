@@ -5,8 +5,8 @@ from django.shortcuts import render, render_to_response
 # Create your views here.
 from app.froms import VolunteerSignupForm
 from blogs.models import Article
-from app.models import AdoptionPageQuestion
-from app.forms import AdoptionQuestionForm, AdoptionQuestionUpdateForm
+from app.models import PageQuestion
+from app.forms import QuestionForm, QuestionUpdateForm
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.base import View, TemplateView
@@ -33,17 +33,33 @@ def contact_us(request):
 def adoptions(request):
 	return render(request, 'adoption.html',{})
 
+class MedicationView(TemplateView):
+	template_name="medication.html"
+
+	def get_context_data(self, *args, **kwargs):
+		context=super(MedicationView, self).get_context_data(*args, **kwargs)
+		context['questions']=PageQuestion.objects.filter(category__name=3)
+		return context
+
 class AdoptionView(TemplateView):
 	template_name="adoption.html"
 
 	def get_context_data(self, *args, **kwargs):
 		context=super(AdoptionView, self).get_context_data(*args, **kwargs)
-		context['questions']=AdoptionPageQuestion.objects.all()
+		context['questions']=PageQuestion.objects.filter(category__name=1)
+		return context
+
+class DonationView(TemplateView):
+	template_name="donation.html"
+
+	def get_context_data(self, *args, **kwargs):
+		context=super(DonationView, self).get_context_data(*args, **kwargs)
+		context['questions']=PageQuestion.objects.filter(category__name=2)
 		return context
 
 class AdoptionCreateView(CreateView):
 	template_name="adoption_create.html"
-	form_class=AdoptionQuestionForm
+	form_class=QuestionForm
 	success_url="/"
 	# fields=('question', 'answer')
 	widgets={
@@ -55,7 +71,7 @@ class AdoptionCreateView(CreateView):
 
 class AdoptionUpdateView(UpdateView):
 	template_name="adoption_update.html"
-	form_class=AdoptionQuestionUpdateForm
+	form_class=QuestionUpdateForm
 	success_url='/'
 	widgets={
 		'answer':SummernoteWidget(),
