@@ -21,3 +21,46 @@
 .third-image-text{position:absolute; bottom:0; font-size:24px; font-family:"vedana"; background:rgba(118, 126, 118, 0.5);
 width:40%; text-align:center;}
 .third-image-text a{font-size:16px; color:#b92b27;}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (min-width: 100px) and (max-width: 575px) {
+	.threeButtons{
+		display: content-box;
+		margin-top: 10%;
+		display: block;
+	}
+	div.row>#onlyButton>div.text-center>a>button{
+		font-size: 10px;
+	}
+	div.logoHeader{
+		display: content-box;
+		width: 100%;
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+	//Homepage Rules
+	.threeButtons{
+		display: content-box;
+		display: block;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) { 
+	.threeButtons{
+		display: content-box;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) { 
+	.threeButtons{
+		display: content-box;
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }

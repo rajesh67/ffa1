@@ -1,25 +1,26 @@
 ﻿{% extends './base.html' %}
 
 {% block buttons %}
-<div class="col-md-6"></div>
-<div class="col-md-3">
+<div class="col-sm-5"></div>
+<div class="col-sm-2">
 	​<a href="{% url 'medications' %}">
-	  <img class="image-circle" src="{{ MEDIA_URL }}images/medication.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 10px;" >
+	  <img class="image-circle" src="{{ MEDIA_URL }}images/medication.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin: 5% 15%;" width="70%">
 	</a>
 </div>
 
-<div class="col-md-3" id="thirdButton">
+<div class="col-sm-2" id="thirdButton" style="margin-top: 25px;">
   <a href="{% url 'donations' %}">
-  <img class="image-circle" src="{{ MEDIA_URL }}images/donation.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 10px;" >
+  <img class="image-circle" src="{{ MEDIA_URL }}images/donation.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin: 5% 15%;" width="70%">
 </a>
 </div>
+<div class="col-sm-2"></div>
 {% endblock %}
 
 {% block extendedPage %}
 <div class="homeContents" style="margin-top: 20px;">
 	<div class="row">
 		
-		<div class="col-md-3" style="margin-left: 30px; width: 80%; margin-bottom: 20px;">
+		<div class="col-sm-2" style="margin-left: 30px; width: 80%; margin-bottom: 20px;">
 			<div class="card">
 			<div class="card-body">
 				<img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;">
@@ -32,7 +33,7 @@
 			</div>
 			</div>
 		</div>
-		<div class="col-md-5" style="margin-left: 10px; width: 80%; margin-bottom: 20px; font-size: 1em; font-family: sans-serif;">
+		<div class="col-sm-7" style="margin-left: 10px; width: 80%; margin-bottom: 20px; font-size: 1em; font-family: sans-serif;">
 			<div class="card">
 			<div class="card-body">
 				<div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -35px;">
@@ -42,7 +43,16 @@
 
 				<div class="adoptionContent" style="font-size: 1em; margin-top: 30px; background-color:  #a06f6f21;">
 					<p class="card-text">
-						Why people should adopt a pet?
+						{% for question in questions %}
+
+							<div class="answer" style="margin-top: 5%;">
+								<h5><strong>{{question.question}}</strong></h5>
+								<div class="answer" style="margin-top: 20px;">
+									{{ question.answer|safe }}
+								</div>
+							</div>
+							<hr style="border: 1px dotted black;">
+						{% endfor %}
 					</p>
 					<p class="card-text" style="">
 						<h5>ADOPT DNT SHOP BECAUSE</h5> When you adopt a pet, you are saving a life. When you buy a pet, you not only deny a homeless pet a home, you are supporting an industry that thrives on short-changing the welfare of animals. Puppy and kitten mills (which sell to pet stores) are in business to make a profit, so they churn out puppies and kittens as fast as they can.
@@ -55,7 +65,7 @@
 			</div>
 			</div>
 		</div>
-		<div class="col-md-3" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+		<div class="col-sm-2" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
 			<div class="card">
 			<div class="card-body">
 				<h5 class="card-title"></h5>
