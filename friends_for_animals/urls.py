@@ -27,11 +27,16 @@ urlpatterns = [
     url(r'^volunteers/$', views.volunteer, name="volunteers"),
     url(r'^about/$', views.about_us, name="about"),
     url(r'^contact/$', views.contact_us, name="contact"),
-    url(r'^adoptions/$', views.adoptions, name="adoptions"),
+    url(r'^adoptions/$', views.AdoptionView.as_view(), name="adoptions"),
+    # 
+    url(r'^adoptions/new/$', views.AdoptionCreateView.as_view(), name="new-adoption-question"),
+    url(r'^adoptions/update/(?P<pk>\d+)/$', views.AdoptionCreateView.as_view(), name="update-adoption-question"),
+    # 
+
     url(r'^donations/$', views.donations, name="donations"),
     url(r'^donors/$', views.donors_list, name="donors-list"),
 
     url(r'^blogs/', include('blogs.urls'), name="blogs"),
 
-
+    url(r'^summernote/', include('django_summernote.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -34,7 +34,7 @@
           <div class="logoHeader-text">
             <a href="/">
               <div class="logoImages">
-              <img src="{{ MEDIA_URL }}images/final_logo.png" width="40%" height="130px">
+              <img src="{{ MEDIA_URL }}images/final_logo.png" width="50%" height="50%">
             </a>
              
             </div>
@@ -44,7 +44,7 @@
       <!-- LogoHeader End -->
       <!-- Navigation Bar Start -->
       <div class="container-fluid" style="width: 100%; background-color: yellow; margin-top: -20px;">
-        <nav class="navbar navbar-light justify-content-between navbar-expand">
+        <nav class="navbar navbar-light navbar-expand-lg">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -93,11 +93,11 @@
       <!-- Navigation Bar End -->
 
       <!-- SlideShow Start -->
-      <div class="slideShowPanel card" style="margin-top: 20px; border-bottom: 1px red;">
-        <div class="helplineContatcts" style="z-index: 3; width: 27%;background-color: #ddd6d6; margin-left: 75%; margin-top: 30px;">
+      <!-- <div class="slideShowPanel card" style="margin-top: 20px; border-bottom: 1px red;">
+        <div class="helplineContatcts" style="z-index: 3; width: 27%; background-color: #ddd6d6; margin-left: 75%; margin-top: 30px; ">
           <div class="text-center">
             <h3>FFA HELPLINES</h3>
-            <div class="centers-list">
+            <div class="centers-list" style="height: 50%;">
               <div class="operating-center-details">
                 <div class="card">
                   <div class="card-title">
@@ -115,32 +115,68 @@
           </div>
         </div>
         <img src="{{ MEDIA_URL }}images/poster_1.png" style="width: 75%; margin-top: -210px;" width="200px;">  
-      </div>
+      </div> -->
       <!-- SlideShow End -->
 
+      <!-- New Container -->
+      <div class="container-fluid" style="margin-top: 2%;">
+        <div class="row">
+          <!-- Col-md-9 -->
+          <div class="col-sm-9">
+            <img src="{{ MEDIA_URL }}images/poster_1.png" style="width: 100%;" width="100%;">
+          </div>
+          <!-- /Col-md-9 -->
+          <div class="col-sm-3">
+            <div class="card" style="margin-top: 2%; font-size-adjust: auto;">
+              <div class="text-center">
+                
+                <big>FFA HELPLINES</big>
+                <div class="centers-list" style="height: 50%;">
+                  <div class="operating-center-details">
+                    <div class="card">
+                      <div class="card-title">
+                        <h5><strong>Kharagpur Center</strong></h5>
+                      </div>
+                      <div class="card-text">
+                        C-201, Nehru Hall of Residence<br>
+                        Indian Institute of Technology Kharagpur<br>
+                        Kharagpur, West Bengal, 721302<br>
+                        India
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /Card -->
+          </div>
+          <!-- /col-md-3 -->
+        </div>
+      </div>
+      <!-- /Container -->
       <!-- Three Buttons Panel Start -->
       
-      <div class="threeButtons" style="margin-top: 10px; margin-top: -50px;">
+      <div class="threeButtons container-fluid" style="margin-top: -5%;">
         <div class="row">
           {% block buttons %}
-          <div class="col-md-3"></div>
-          <div class="col-md-3">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-2">
             ​<a href="{% url 'medications' %}">
-              <img class="image-circle" src="{{ MEDIA_URL }}images/medication.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 10px;" >
+              <img class="image-circle" src="{{ MEDIA_URL }}images/medication.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100%; margin: 5% 15%" width="80%">
             </a>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-sm-2">
             ​<a href="{% url 'adoptions' %}">
-              <img class="image-circle" src="{{ MEDIA_URL }}images/adoption_new.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 10px;" >
+              <img class="image-circle" src="{{ MEDIA_URL }}images/adoption_new.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100%; margin: 5% 15%;" width="80%" >
             </a>
           </div>
 
-          <div class="col-md-3" id="thirdButton">
+          <div class="col-sm-2" id="thirdButton" style="margin-top: 30px;">
               <a href="{% url 'donations' %}">
-              <img class="image-circle" src="{{ MEDIA_URL }}images/donation.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100px; margin-left: 10px;" >
+              <img class="image-circle" src="{{ MEDIA_URL }}images/donation.png" class="img-fluid img-thumbnail" alt="Adopt A PET" style="border-radius: 100%; margin: 5% 15%;" width="80%" >
             </a>
           </div>
+          <div class="col-sm-3"></div>
           {% endblock %}
         </div>
       </div>
@@ -200,7 +236,7 @@
     </div>
   </div>
   <!-- Footer End -->
-  </div>
+  
 
   <div class="col-md-1" style=""></div>
 </div>

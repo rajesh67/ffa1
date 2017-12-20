@@ -5,6 +5,12 @@ from django.shortcuts import render, render_to_response
 # Create your views here.
 from app.froms import VolunteerSignupForm
 from blogs.models import Article
+from app.models import AdoptionPageQuestion
+from app.forms import AdoptionQuestionForm, AdoptionQuestionUpdateForm
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.base import View, TemplateView
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 def index(request):
 	return render(request, 'home.html', {'object_list': Article.objects.all()})
@@ -26,6 +32,37 @@ def contact_us(request):
 
 def adoptions(request):
 	return render(request, 'adoption.html',{})
+
+class AdoptionView(TemplateView):
+	template_name="adoption.html"
+
+	def get_context_data(self, *args, **kwargs):
+		context=super(AdoptionView, self).get_context_data(*args, **kwargs)
+		context['questions']=AdoptionPageQuestion.objects.all()
+		return context
+
+class AdoptionCreateView(CreateView):
+	template_name="adoption_create.html"
+	form_class=AdoptionQuestionForm
+	success_url="/"
+	# fields=('question', 'answer')
+	widgets={
+		'answer':SummernoteWidget(),
+	}
+
+	def form_valid(self, form):
+		return super(AdoptionCreateView, self).form_valid(form)
+
+class AdoptionUpdateView(UpdateView):
+	template_name="adoption_update.html"
+	form_class=AdoptionQuestionUpdateForm
+	success_url='/'
+	widgets={
+		'answer':SummernoteWidget(),
+	}
+
+	def form_valid(self, *args, **kwargs):
+		return super(AdoptionUpdateView, self).form_valid(*args, **kwargs)
 
 def donations(request):
 	return render(request, 'donation.html',{})
