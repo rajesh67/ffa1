@@ -6,9 +6,9 @@ from django.db import models
 # Create your models here.
 
 CAT_CHOICES=(
-	('1', 'Adoption'),
-	('2', 'Donation'),
-	('3', 'Medication/Sponse'),
+	('1', 'Medication/Sponse'),
+	('2', 'Adoption'),
+	('3', 'Donation'),
 )
 
 class Category(models.Model):
