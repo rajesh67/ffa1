@@ -39,7 +39,7 @@ class MedicationView(TemplateView):
 
 	def get_context_data(self, *args, **kwargs):
 		context=super(MedicationView, self).get_context_data(*args, **kwargs)
-		context['questions']=PageQuestion.objects.filter(category__name=3)
+		context['questions']=PageQuestion.objects.filter(category__name=1)
 		return context
 
 class AdoptionView(TemplateView):
@@ -47,7 +47,7 @@ class AdoptionView(TemplateView):
 
 	def get_context_data(self, *args, **kwargs):
 		context=super(AdoptionView, self).get_context_data(*args, **kwargs)
-		context['questions']=PageQuestion.objects.filter(category__name=1)
+		context['questions']=PageQuestion.objects.filter(category__name=2)
 		return context
 
 class DonationView(TemplateView):
@@ -55,7 +55,7 @@ class DonationView(TemplateView):
 
 	def get_context_data(self, *args, **kwargs):
 		context=super(DonationView, self).get_context_data(*args, **kwargs)
-		context['questions']=PageQuestion.objects.filter(category__name=2)
+		context['questions']=PageQuestion.objects.filter(category__name=3)
 		return context
 
 class AdoptionCreateView(CreateView):
