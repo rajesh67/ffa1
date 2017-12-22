@@ -9,6 +9,7 @@ CAT_CHOICES=(
 	('1', 'Medication/Sponse'),
 	('2', 'Adoption'),
 	('3', 'Donation'),
+	('4', 'About US'),
 )
 
 class Category(models.Model):

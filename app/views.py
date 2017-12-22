@@ -22,8 +22,6 @@ def about_us(request):
 def events(request):
 	return render(request, 'event.html', {})
 
-def medication(request):
-	return render(request, 'medication.html', {})
 
 def volunteer(request):
 	return render(request, 'volunteer.html', {'form':VolunteerSignupForm()})
@@ -31,8 +29,13 @@ def volunteer(request):
 def contact_us(request):
 	return render(request, 'contact.html',{})
 
-def adoptions(request):
-	return render(request, 'adoption.html',{})
+class AboutUSView(TemplateView):
+	template_name="about_us.html"
+
+	def get_context_data(self, *args, *kwargs):
+		context=super(AboutUSView, self).get_context_data(*args, **kwargs)
+		context['questions']=PageQuestion.objects.filter(category__name=4)
+		return context
 
 class MedicationView(TemplateView):
 	template_name="medication.html"
