@@ -32,7 +32,7 @@ def contact_us(request):
 class AboutUSView(TemplateView):
 	template_name="about_us.html"
 
-	def get_context_data(self, *args, *kwargs):
+	def get_context_data(self, *args, **kwargs):
 		context=super(AboutUSView, self).get_context_data(*args, **kwargs)
 		context['questions']=PageQuestion.objects.filter(category__name=4)
 		return context
