@@ -7,7 +7,10 @@
 }
 
 .mainPageBody>div>nav>div>ul>li{
-	margin-left: 10px;
+	margin-left: 10%;
+}
+.mainPageBody>div>nav>div>ul>li.active{
+	background-color: red;
 }
 
 #thirdButton{
@@ -17,6 +20,10 @@
 #footer>div>div>ul>li>a{
 	color: yellow;
 }
+/*
+Navigation
+*/
+
 
 .third-image-text{position:absolute; bottom:0; font-size:24px; font-family:"vedana"; background:rgba(118, 126, 118, 0.5);
 width:40%; text-align:center;}
