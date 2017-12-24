@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^events/$', views.events, name="events"),
     url(r'^medication/$', views.MedicationView.as_view(), name="medications"),
     url(r'^volunteers/$', views.VolunteerView.as_view(), name="volunteers"),
+    url(r'^thanks/$', views.volunteer_thanks, name="thanks"),
     url(r'^about/$', views.about_us, name="about"),
     url(r'^contact/$', views.contact_us, name="contact"),
     url(r'^adoptions/$', views.AdoptionView.as_view(), name="adoptions"),

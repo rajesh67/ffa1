@@ -23,8 +23,8 @@ def events(request):
 	return render(request, 'event.html', {})
 
 
-def volunteer(request):
-	return render(request, 'volunteer.html', {'form':VolunteerSignupForm()})
+def volunteer_thanks(request):
+	return render(request, 'thanks.html',{})
 
 def contact_us(request):
 	return render(request, 'contact.html',{})
@@ -32,9 +32,10 @@ def contact_us(request):
 class VolunteerView(CreateView):
 	template_name="volunteer.html"
 	form_class=VolunteerSignupForm
-	success_url='/'
+	success_url='/thanks/'
 
 	def form_valid(self, form):
+		form.send_mail()
 		return super(VolunteerView, self).form_valid(form)
 
 class AboutUSView(TemplateView):

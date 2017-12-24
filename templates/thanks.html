@@ -1,0 +1,56 @@
+{% extends './base.html' %}
+
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+
+{% block extendedPage %}
+<div class="homeContents" style="margin-top: 20px;">
+	<div class="row">
+
+		<div class="col-sm-2" style="margin-left: 1%; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<p class="card-text"></p>
+			</div>
+			</div>
+		</div>
+		<div class="col-sm-8" style="margin-left: -1%; width: 80%; margin-bottom: 20px; font-size: .8em;">
+			<div class="card">
+			<div class="card-body">
+				<div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -35px;">
+				<h5 class="card-title">Volunteers</h5>
+				<hr>
+				</div>
+				
+				<div class="volunteerContents text-center" style="font-size: 1em; margin-top: 30px;">
+					<h1 style="font-size: 1000%;">&#x2611;</h1>
+					<h3>Thank You for showing your interest with Friends For Animal</h3>
+					<h5>We will contact you soon</h5>
+
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-sm-2" style="margin-left: -1%; width: 80%; margin-bottom: 20px;">
+			<div class="card">
+			<div class="card-body">
+				<h5 class="card-title"></h5>
+				<p class="card-text">
+					
+				</p>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
