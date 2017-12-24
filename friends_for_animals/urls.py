@@ -20,7 +20,7 @@ from django.contrib import admin
 from app import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^chandu/raju/admin/', admin.site.urls),
     url(r'^$', views.index, name="home"),
     url(r'^events/$', views.events, name="events"),
     url(r'^medication/$', views.MedicationView.as_view(), name="medications"),
