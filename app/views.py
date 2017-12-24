@@ -35,7 +35,7 @@ class VolunteerView(CreateView):
 	success_url='/thanks/'
 
 	def form_valid(self, form):
-		form.send_mail()
+		# form.send_mail()
 		return super(VolunteerView, self).form_valid(form)
 
 class AboutUSView(TemplateView):
