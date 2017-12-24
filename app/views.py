@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, render_to_response
 # Create your views here.
-from app.froms import VolunteerSignupForm
+from app.forms import VolunteerSignupForm
 from blogs.models import Article
 from app.models import PageQuestion, Donor
 from app.forms import QuestionForm, QuestionUpdateForm
@@ -28,6 +28,14 @@ def volunteer(request):
 
 def contact_us(request):
 	return render(request, 'contact.html',{})
+
+class VolunteerView(CreateView):
+	template_name="volunteer.html"
+	form_class=VolunteerSignupForm
+	success_url='/'
+
+	def form_valid(self, form):
+		return super(VolunteerView, self).form_valid(form)
 
 class AboutUSView(TemplateView):
 	template_name="about_us.html"

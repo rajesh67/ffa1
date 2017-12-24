@@ -34,7 +34,7 @@
 				
 				<div class="volunteerContents" style="font-size: 1em; margin-top: 30px;">
 					<h5 style="font-size: 1em;"><strong>Fill this form to become an active volunteer of our organization:</strong></h5>
-					<form class="form-horizontal">
+					<form class="form-horizontal" action="" method="post">
 						{% csrf_token %}
 						{% bootstrap_form form %}
 						<button class="btn btn-primary" type="submit">Submit Volunteer Request</button>
