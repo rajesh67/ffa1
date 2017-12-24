@@ -6,12 +6,12 @@
 	margin-bottom: 100px;
 }
 
-.mainPageBody>div>nav>div>ul>li{
+/*.mainPageBody>div>nav>div>ul>li{
 	margin-left: 10%;
-}
-.mainPageBody>div>nav>div>ul>li.active{
+}*/
+/*.mainPageBody>div>nav>div>ul>li.active{
 	background-color: red;
-}
+}*/
 
 #thirdButton{
 	position: relative;
