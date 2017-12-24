@@ -8,6 +8,8 @@ from django.contrib.auth.models import *
 
 class Article(models.Model):
 	title=models.CharField(max_length=250)
+	subtitle=models.CharField(max_length=250,default="nothing")
+	image=models.ImageField(upload_to='uploads/blogs', default="image.png")
 	text=models.TextField()
 	pub_date=models.DateTimeField()
 	user=models.ForeignKey(User, on_delete=models.CASCADE)
