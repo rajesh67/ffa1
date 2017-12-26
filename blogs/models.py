@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import *
-
+from django.urls import reverse
 # Create your models here.
 
 class Article(models.Model):
@@ -16,4 +16,7 @@ class Article(models.Model):
 
 	def __str__(self):
 		return self.title
+
+	def get_absolute_url(self):
+		return reverse('article-detail', kwargs={'pk':self.pk})
 		
