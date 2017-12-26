@@ -50,7 +50,12 @@
                                 <p>{{ object.text|safe }}</p>
                             </div>
                             <hr style="border: 1px dotted black;">
-                            {% post_to_facebook object  "Post to Facebook!" %}
+                            <div style="margin-top: 1%;">
+                                {% post_to_facebook object  "Share On Facebook" %}
+                            </div>
+                            <div style="margin-top: 1%;">
+                                {% post_to_twitter "{{object.title}}" object "Share On Twitter" %}
+                            </div>
                         </div>
                     </p>
                 </div>
