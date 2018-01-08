@@ -134,15 +134,15 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static/customs'),
+    os.path.join(BASE_DIR, 'static/customs/'),
 )
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 MEDIAFILES_DIRS = (
-    os.path.join(BASE_DIR, "media/images"),
+    os.path.join(BASE_DIR, "media/images/"),
     #'/var/www/static/',
 )
 
