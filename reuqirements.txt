@@ -1,9 +1,8 @@
 dj-database-url==0.4.2
 dj-static==0.0.6
-Django==2.0
+Django==1.9
 django-bootstrap3==9.1.0
 django-froala-editor==2.7.3
-django-social-share==1.1.2
 django-summernote==0.8.8.5
 django-tinymce==2.6.0
 django-toolbelt==0.0.1

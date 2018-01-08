@@ -3,17 +3,11 @@
 {% block extendedPage %}
 <div class="homeContents" style="margin-top: 20px;">
 	<div class="row">
-		<div class="col-md-12" id="onlyButton">
-			<div class="text-center" style="margin-bottom: 40px; ">
-				<a href="">
-					<button class="btn btn-lg btn-danger">FRIENDS FOR ANIMAL<br/>DONORS</button>
-				</a>
-			</div>
-		</div>
-		<div class="col-md-2" style="margin-left: 30px; width: 70%; margin-bottom: 20px;">
+		
+		<div class="col-sm-2" style="margin-left: 1%; width: 70%; margin-bottom: 20px;">
 			<div class="card">
 			<div class="card-body">
-				<img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;" width="150%;">
+				<img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;" width="100%;">
 				<h5 class="card-title" style="font-size: .8em;">It's not just funds and homes that our dear animals need. You can contribute your time and energy to bring about a difference.</h5>
 				<a class="card-text" href="{% url 'volunteers' %}">
 					<button class="btn btn-block btn-warning" style="border-radius: 5px;">Signup Here</button>
@@ -21,37 +15,51 @@
 			</div>
 			</div>
 		</div>
-		<div class="col-md-7" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+		<div class="col-sm-9" style="margin-left: -1%; width: 80%; margin-bottom: 20px;">
 			<div class="card">
 			<div class="card-body">
 				<div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -35px;">
-					<h4 class="card-title"><strong>Latest Events and Rescues</strong></h4>	
+					<h4 class="card-title"><strong>Latest News and Articles</strong></h4>	
 					<hr>
 				</div>
 			
 				<div class="homeCotents" style="font-size: 1em; margin-top: 30px;">
-					<p class="card-text">
+					<style type="text/css">
+						div#custom>a{
+							
+							text-decoration: none;
+						}
+					</style>
+					<div class="card-text" id="custom">
 						{% for article in object_list %}
-						<div class="card" style="margin-top: 10px;">
+						<!-- <div class="card" style="margin-top: 10px;">
 							<div class="card-title">
-								<strong><h4>{{ article.title }}</h4></strong> <small>posted by </small><a href="">{{ article.user.username }} 
+								<strong><h4>{{ article.title }}</h4></strong> <small>posted by </small><a href="">{{ article.user.username }}</a> 
 							</div>
-							<p>{{ article.text|truncatechars:200}}<a href="{% url 'article-detail' article.pk %}">read more</a></p>
-						</div>
+							{% with article.text|safe as text %}
+								<p>{{ text|truncatechars:100}}<a href="{% url 'article-detail' article.pk %}">read more</a></p>
+							{% endwith %}
+							
+						</div> -->
+						
+						<a href="{% url 'article-detail' article.pk %}">
+							<div class="blog-header" style="">
+								<div class="text-center" style="padding-bottom: 5%;">
+									<img src="{{MEDIA_URL}}{{article.image}}" width="50%">
+									<div style="margin-top: -20%;">
+										<h1>{{article.title}}</h1>
+										<p>{{article.subtitle}}</p>
+									</div>
+								</div>
+							</div>
+						</a>
 						{% endfor %}
-					</p>
+					</div>
 				</div>
 			</div>
 			</div>
 		</div>
-		<div class="col-md-2" style=" margin-bottom: 20px;">
-			<div class="card">
-			<div class="card-body">
-				<h5 class="card-title">Contents</h5>
-				<p class="card-text">text</p>
-			</div>
-			</div>
-		</div>
 	</div>
+	
 </div>
 {% endblock %}

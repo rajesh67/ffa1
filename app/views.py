@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, render_to_response
 # Create your views here.
-from app.froms import VolunteerSignupForm
+from app.forms import VolunteerSignupForm
 from blogs.models import Article
 from app.models import PageQuestion, Donor, Volunteer
 from app.forms import QuestionForm, QuestionUpdateForm
@@ -22,15 +22,19 @@ def about_us(request):
 def events(request):
 	return render(request, 'programs.html', {'title':"Our Programs"})
 
+<<<<<<< HEAD
 def thank_you(request):
 	return render(request, 'page.html', {'thank_you':'Thank You Very much for showing interest in us', "title":"Request For Membeship/Volunteer"})
+=======
+>>>>>>> 670b2cc7d6e065f2900e993257efb4190b38894b
 
-def volunteer(request):
-	return render(request, 'volunteer.html', {'form':VolunteerSignupForm()})
+def volunteer_thanks(request):
+	return render(request, 'thanks.html',{})
 
 def contact_us(request):
 	return render(request, 'page.html',{'title':"Contact us / Reach FFA", "questions":PageQuestion.objects.filter(category__name=5)})
 
+<<<<<<< HEAD
 
 class VolunteerCreateView(CreateView):
 	model=Volunteer
@@ -42,6 +46,23 @@ class VolunteerCreateView(CreateView):
 	def get_context_data(self, *args, **kwargs):
 		context=super(VolunteerCreateView, self).get_context_data(*args, **kwargs)
 		context['title']="Request to become an active ffa member"
+=======
+class VolunteerView(CreateView):
+	template_name="volunteer.html"
+	form_class=VolunteerSignupForm
+	success_url='/thanks/'
+
+	def form_valid(self, form):
+		# form.send_mail()
+		return super(VolunteerView, self).form_valid(form)
+
+class AboutUSView(TemplateView):
+	template_name="about_us.html"
+
+	def get_context_data(self, *args, **kwargs):
+		context=super(AboutUSView, self).get_context_data(*args, **kwargs)
+		context['questions']=PageQuestion.objects.filter(category__name=4)
+>>>>>>> 670b2cc7d6e065f2900e993257efb4190b38894b
 		return context
 
 class MedicationView(TemplateView):

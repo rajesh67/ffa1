@@ -10,7 +10,16 @@ CAT_CHOICES=(
 	('2', 'Adoption'),
 	('3', 'Donation'),
 	('4', 'About US'),
+<<<<<<< HEAD
 	('5', 'Contact US'),
+=======
+)
+
+GENDER_CHOICES=(
+	('male', 'Male'),
+	('female', 'Female'),
+	('others', 'Others'),
+>>>>>>> 670b2cc7d6e065f2900e993257efb4190b38894b
 )
 
 class Category(models.Model):
@@ -36,6 +45,7 @@ class Donor(models.Model):
 		return self.name
 
 class Volunteer(models.Model):
+<<<<<<< HEAD
 	full_name=models.CharField(max_length=100)
 	email=models.EmailField(max_length=100)
 	profession=models.CharField(max_length=100)
@@ -44,3 +54,19 @@ class Volunteer(models.Model):
 
 	def __str__(self):
 		return self.full_name
+=======
+	name=models.CharField(max_length=250)
+	email=models.EmailField(max_length=250)
+	profession=models.CharField(max_length=150)
+	phone_no=models.CharField(max_length=13)
+	alt_phone_no=models.CharField(max_length=13)
+	gender=models.CharField(max_length=10, choices=GENDER_CHOICES, default='male')
+	age=models.PositiveIntegerField()
+	location=models.CharField(max_length=250)
+	nationality=models.CharField(max_length=100)
+	joining_reason=models.TextField(verbose_name="Why should you join Friends For Animal?")
+	hearing_mode=models.CharField(max_length=120, verbose_name="How did you hear about us?")
+
+	def __str__(self):
+		return self.name
+>>>>>>> 670b2cc7d6e065f2900e993257efb4190b38894b

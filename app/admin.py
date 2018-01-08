@@ -13,4 +13,5 @@ class AdoptionQuestionModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
 admin.site.register(Volunteer)
 admin.site.register(Category)
 admin.site.register(Donor)
+admin.site.register(Volunteer)
 admin.site.register(PageQuestion, AdoptionQuestionModelAdmin)

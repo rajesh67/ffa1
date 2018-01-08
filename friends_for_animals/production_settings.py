@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'bootstrap3',
     'whitenoise',
     'django_summernote',
+    'django_social_share',
 ]
 
 MIDDLEWARE = [

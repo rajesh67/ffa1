@@ -1,19 +1,27 @@
 {% extends 'base.html' %}
+{% load social_share %}
+{% block blogHeader %}
+<div class="container-fluid" style="margin-top: 2%;">
+    <div class="header" style="background-image: url({{MEDIA_URL}}{{object.image}}); padding-bottom: 25%; margin-bottom: 1%;background-repeat: no-repeat; margin-left: 3%">
+        <!-- Header -text -->
+        <div  style="width: 80%; margin-left: 10%; padding-top: 25%;">
+            <font color="red">
+                <div class="text-center"><h1>{{object.title }}</h1></div>
+            <div class="text-center"><h5>{{object.subtitle}}</h5></div>
+            </font>
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 {% block extendedPage %}
 <div class="homeContents" style="margin-top: 20px;">
     <div class="row">
-        <div class="col-md-12" id="onlyButton">
-            <div class="text-center" style="margin-bottom: 40px; ">
-                <a href="">
-                    <button class="btn btn-lg btn-danger">FRIENDS FOR ANIMAL<br/>DONORS</button>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3" style="margin-left: 30px; width: 80%; margin-bottom: 20px;">
+        
+        <div class="col-sm-2" style="margin-left: 1%; width: 80%; margin-bottom: 20px;">
             <div class="card">
             <div class="card-body">
-                <img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;">
+                <img src="http://www.idaindia.org/images/volunteer_header.gif" style="margin-left: -25px;" width="100%">
                 <h5 class="card-title" style="font-size: .8em;">It's not just funds and homes that our dear animals need. You can contribute your time and energy to bring about a difference.</h5>
                 <a class="card-text" href="{% url 'volunteers' %}">
 
@@ -22,7 +30,7 @@
             </div>
             </div>
         </div>
-        <div class="col-md-7" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+        <div class="col-sm-9" style="margin-left: -1%; width: 80%; margin-bottom: 20px;">
             <div class="card">
             <div class="card-body">
                 <div class="bigHead" style="background-color: yellow; padding: 10px 10px; margin: -20px -35px;">
@@ -39,16 +47,22 @@
                         <div class="card" style="margin-top: 10px;">
                             
                             <div class="card-text">
-                                <p>{{ object.text }}</p>
+                                <p>{{ object.text|safe }}</p>
                             </div>
-                            
+                            <hr style="border: 1px dotted black;">
+                            <div style="margin-top: 1%;">
+                                {% post_to_facebook object  "Share On Facebook" %}
+                            </div>
+                            <div style="margin-top: 1%;">
+                                {% post_to_twitter "{{object.title}}" object "Share On Twitter" %}
+                            </div>
                         </div>
                     </p>
                 </div>
             </div>
             </div>
         </div>
-        <div class="col-md-1" style="margin-left: 10px; width: 80%; margin-bottom: 20px;">
+        <div class="col-sm-2" style="margin-left: -1%; width: 80%; margin-bottom: 20px;">
             <!-- <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Contents</h5>
@@ -58,4 +72,8 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block buttons %}
+
 {% endblock %}
