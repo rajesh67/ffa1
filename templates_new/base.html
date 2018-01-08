@@ -14,6 +14,15 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'screen_layout_large.css' %}"><!-- Large Screen CSS -->
 	<link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:576px)" href="{% static 'screen_layout_small.css' %}"><!-- Small Screen CSS -->
 	<link rel="stylesheet" type="text/css" media="only screen and (min-width:577px) and (max-width:992px)" href="{% static 'screen_layout_medium.css' %}"><!-- Medium Screen CSS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(".navbar-nav li a").on("click", function(){
+		   $(".navbar-nav").find(".active").removeClass("active");
+		   $(this).parent().addClass("active");
+		});
+	</script>
 </head>
 <body style="background-color: #dfe3e5;">
 	<div class="page">
@@ -245,14 +254,7 @@
 	</div><!-- /PAGE -->
 
 	<!-- JS FILES -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-		$(".navbar-nav li a").on("click", function(){
-		   $(".navbar-nav").find(".active").removeClass("active");
-		   $(this).parent().addClass("active");
-		});
-	</script>
+	
+	
 </body>
 </html>
