@@ -58,7 +58,7 @@ header ul{
 }
 
 #fbtn{
-	background-image: url(../media/images/fbook.png);
+	background-image: url(/media/images/fbook.png);
 	background-position: 10px 2px;
 	background-size: 50px 40px;
 	background-repeat: no-repeat;
@@ -73,7 +73,7 @@ header ul{
 }
 
 #tbtn{
-	background-image: url(../media/images/twitter.png);
+	background-image: url(/media/images/twitter.png);
 	background-position: 10px 2px;
 	background-size: 50px 40px;
 	background-repeat: no-repeat;
