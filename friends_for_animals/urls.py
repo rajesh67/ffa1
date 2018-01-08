@@ -24,13 +24,10 @@ urlpatterns = [
     url(r'^$', views.index, name="home"),
     url(r'^programs/$', views.events, name="events"),
     url(r'^medication/$', views.MedicationView.as_view(), name="medications"),
-<<<<<<< HEAD
     #url(r'^volunteers/$', views.volunteer, name="volunteers"),
     url(r'^volunteers/$', views.VolunteerCreateView.as_view(), name="volunteers"),
-=======
     url(r'^volunteers/$', views.VolunteerView.as_view(), name="volunteers"),
     url(r'^thanks/$', views.volunteer_thanks, name="thanks"),
->>>>>>> 670b2cc7d6e065f2900e993257efb4190b38894b
     url(r'^about/$', views.about_us, name="about"),
     url(r'^contact/$', views.contact_us, name="contact"),
     url(r'^adoptions/$', views.AdoptionView.as_view(), name="adoptions"),

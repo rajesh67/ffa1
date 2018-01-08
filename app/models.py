@@ -10,16 +10,13 @@ CAT_CHOICES=(
 	('2', 'Adoption'),
 	('3', 'Donation'),
 	('4', 'About US'),
-<<<<<<< HEAD
 	('5', 'Contact US'),
-=======
 )
 
 GENDER_CHOICES=(
 	('male', 'Male'),
 	('female', 'Female'),
 	('others', 'Others'),
->>>>>>> 670b2cc7d6e065f2900e993257efb4190b38894b
 )
 
 class Category(models.Model):
@@ -45,7 +42,6 @@ class Donor(models.Model):
 		return self.name
 
 class Volunteer(models.Model):
-<<<<<<< HEAD
 	full_name=models.CharField(max_length=100)
 	email=models.EmailField(max_length=100)
 	profession=models.CharField(max_length=100)
@@ -54,7 +50,7 @@ class Volunteer(models.Model):
 
 	def __str__(self):
 		return self.full_name
-=======
+class Volunteer(models.Model):
 	name=models.CharField(max_length=250)
 	email=models.EmailField(max_length=250)
 	profession=models.CharField(max_length=150)
@@ -69,4 +65,3 @@ class Volunteer(models.Model):
 
 	def __str__(self):
 		return self.name
->>>>>>> 670b2cc7d6e065f2900e993257efb4190b38894b

@@ -10,7 +10,6 @@ from app.models import PageQuestion, Category, Donor, Volunteer
 class AdoptionQuestionModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
     summer_note_fields = '__all__'
 
-admin.site.register(Volunteer)
 admin.site.register(Category)
 admin.site.register(Donor)
 admin.site.register(Volunteer)
