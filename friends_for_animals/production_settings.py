@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f1xww0&1t9@3$u3zg4-cf-ocmi%lyr$!ctxwo$5d4-03%!hz1='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*', 'friends-for-animal.herokuapp.com', '127.0.0.1', 'localhost']
 
