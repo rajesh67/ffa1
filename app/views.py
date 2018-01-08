@@ -5,7 +5,7 @@ from django.shortcuts import render, render_to_response
 # Create your views here.
 from app.froms import VolunteerSignupForm
 from blogs.models import Article
-from app.models import PageQuestion, Donor
+from app.models import PageQuestion, Donor, Volunteer
 from app.forms import QuestionForm, QuestionUpdateForm
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
@@ -17,45 +17,58 @@ def index(request):
 	return render(request, 'home.html', {'object_list': Article.objects.all()})
 
 def about_us(request):
-	return render(request, 'about_us.html',{})
+	return render(request, 'page.html',{'title':"About FFA", "questions":PageQuestion.objects.filter(category__name=4)})
 
 def events(request):
-	return render(request, 'event.html', {})
+	return render(request, 'programs.html', {'title':"Our Programs"})
 
-def medication(request):
-	return render(request, 'medication.html', {})
+def thank_you(request):
+	return render(request, 'page.html', {'thank_you':'Thank You Very much for showing interest in us', "title":"Request For Membeship/Volunteer"})
 
 def volunteer(request):
 	return render(request, 'volunteer.html', {'form':VolunteerSignupForm()})
 
 def contact_us(request):
-	return render(request, 'contact.html',{})
+	return render(request, 'page.html',{'title':"Contact us / Reach FFA", "questions":PageQuestion.objects.filter(category__name=5)})
 
-def adoptions(request):
-	return render(request, 'adoption.html',{})
+
+class VolunteerCreateView(CreateView):
+	model=Volunteer
+	template_name='page.html'
+	success_url='/thank-you/#content'
+	fields='__all__'
+
+
+	def get_context_data(self, *args, **kwargs):
+		context=super(VolunteerCreateView, self).get_context_data(*args, **kwargs)
+		context['title']="Request to become an active ffa member"
+		return context
 
 class MedicationView(TemplateView):
-	template_name="medication.html"
+	template_name="page.html"
 
 	def get_context_data(self, *args, **kwargs):
 		context=super(MedicationView, self).get_context_data(*args, **kwargs)
 		context['questions']=PageQuestion.objects.filter(category__name=1)
+		context['title']='Pet/Stray Animal Medication'
 		return context
 
 class AdoptionView(TemplateView):
-	template_name="adoption.html"
+	template_name="page.html"
 
 	def get_context_data(self, *args, **kwargs):
 		context=super(AdoptionView, self).get_context_data(*args, **kwargs)
 		context['questions']=PageQuestion.objects.filter(category__name=2)
+		context['title']='Pet Adoption and Care'
 		return context
 
 class DonationView(TemplateView):
-	template_name="donation.html"
+	template_name="page.html"
 
 	def get_context_data(self, *args, **kwargs):
 		context=super(DonationView, self).get_context_data(*args, **kwargs)
 		context['questions']=PageQuestion.objects.filter(category__name=3)
+		context['title']='Donate to Support this Cause'
 		return context
 
 class AdoptionCreateView(CreateView):
@@ -83,8 +96,10 @@ class AdoptionUpdateView(UpdateView):
 
 class DonorListView(ListView):
 	model=Donor
-	template_name="donors_list.html"
+	template_name="page.html"
 
 	def get_context_data(self, *args, **kwargs):
 		context=super(DonorListView, self).get_context_data(*args, **kwargs)
+		context['donors']=Donor.objects.all()
+		context['title']='People Who Supports FFA'
 		return context

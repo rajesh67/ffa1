@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+nav .navbar-toggler{
+	color: #000;
+}
+
+header ul{
+	list-style: none;
+	display: block;
+}
+
+
+#buttons{
+	margin-top: 10px;
+}
+
+#donate_btn{
+
+}
+
+#helpline_section{
+	margin: 10px auto;
+	text-align: left;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+#helpline_section .helplines{
+
+}
+
+.navbar-toggler{
+	text-transform: uppercase;
+}
+section.donation{
+}
+
+footer {
+	font-size: 0.85em; color:#9ba0bd; background-color:#575c7a; padding: 10px 10px 10px 20px;
+}
+
+footer .container{
+	width: 90%;
+	float: center;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+header .social{
+	margin: 0px 1%;
+	width: 50%;
+	float: right;
+	font-size: 0.8em;
+}
+
+header ul{
+	margin: 10px 5%;
+}
+
+#fbtn{
+	background-image: url(../media/images/fbook.png);
+	background-position: 10px 2px;
+	background-size: 50px 40px;
+	background-repeat: no-repeat;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 9px;
+	border: solid #a23609 2px;
+	top:10px;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-right: 10%;
+}
+
+#tbtn{
+	background-image: url(../media/images/twitter.png);
+	background-position: 10px 2px;
+	background-size: 50px 40px;
+	background-repeat: no-repeat;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 9px;
+	border: solid #a23609 2px;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+div.col-md-4.button_div{
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+	background-position: 0px 0px;
+}
+div.col-md-4.button_div .content{
+	padding: 0px 0px 0px 50px;
+}

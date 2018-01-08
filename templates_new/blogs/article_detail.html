@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block buttons %}
+
+{% endblock buttons %}
+
+
+{% block pageContent %}
+<section class="page_content" data-spy="scroll" data-target="#navbar-main" data-offset="0">
+	
+	<!-- Blog Contents -->
+	<div class="container" id="content">
+		<div class="row">
+			<div class="col-sm-1">
+			</div><!-- Left Side Bar -->
+			<div class="col-sm-10">
+				<div class="card">
+					<div class="card-header" style="font-size: 1.1em; text-transform: uppercase; background-color: #a6430a; color: #fff;">
+						<h4>{{object.title}}</h4>
+						<p>{{object.subtitle}}</p>
+					</div><!-- Card Header -->
+					<div class="card-body" style="p img{
+						width: 50%;
+					}">
+						{{object.text|safe}}
+					</div><!-- The Medication Content -->
+				</div><!-- The Card -->
+			</div><!-- Medication Content -->
+			<div class="col-sm-1">
+				
+			</div><!-- Right Sidebar Content -->
+		</div><!-- Medication Row -->
+	</div><!-- Medication Contents -->	
+</section>
+{% endblock pageContent %}

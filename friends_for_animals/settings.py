@@ -60,7 +60,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            "templates",
+            "templates_new",
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -150,7 +150,7 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static/admin'),
+    os.path.join(BASE_DIR, 'static/customs'),
 )
 
 MEDIA_URL = '/media/'
@@ -161,3 +161,5 @@ MEDIAFILES_DIRS = (
     os.path.join(BASE_DIR, "media/images"),
     #'/var/www/static/',
 )
+
+

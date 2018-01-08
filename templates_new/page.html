@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% block buttons %}
+
+{% endblock buttons %}
+
+
+{% block pageContent %}
+<section class="page_content" data-spy="scroll" data-target="#navbar-main" data-offset="0">
+
+	<!-- Medicatio Contents -->
+	<div class="container" id="content">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="container">
+					<div class="row">
+						{% if not form and not thank_you %}
+							<div class="col-md-12">
+								<img src="http://www.idaindia.org/images/volunteer_header.gif" class="img-fluid" style="">
+								<p class="card-title" style="">It's not just funds and homes that our dear animals need. You can contribute your time and energy to bring about a difference.</p>
+									<p class="btn" style="border-radius: 5px; border: solid #a6430a 2px;"><a class="card-text" href="{% url 'volunteers' %}#content" style="text-decoration: none; text-transform: uppercase;">Signup Here</a></p>
+							</div>
+						{% endif %}
+					</div><!-- Row -->
+				</div><!-- Container -->
+			</div><!-- Left Side Bar -->
+			<div class="col-md-8">
+				<div class="card">
+					<div class="card-header" style="font-size: 1.1em; text-transform: uppercase; background-color: #a6430a; color: #fff;">
+						<h4>{{title}}</h4>
+					</div><!-- Card Header -->
+					<div class="card-body">
+						{% if questions %}
+							{% for question in questions %}
+								<div class="content">
+									<div class="card-title">
+										<h5>{{question.question}}</h5>
+									</div><!-- Medication Question Title -->
+									
+									<div class="card-text">
+										{{question.answer|safe}}
+									</div><!-- Question Answer -->
+								</div><!-- Content -->
+							{% endfor %}
+						{% elif donors %}
+								<div class="content">
+									<div class="card-title">
+										<h5>Donors Details</h5>
+									</div><!-- Medication Question Title -->
+									
+									<div class="card-text">
+											<table class="table table-responsive">
+												<thead>Our Dear Donors Contributon Details</thead>
+												<tbody>
+													<tr>
+														<th>Sl. No. </th>
+														<th>Donor Name</th>
+														<th>Donor Email</th>
+														<th>Donor Amount</th>
+														<th> Date</th>
+													</tr>
+													{% for donor in donors %}
+														<tr>
+															<td>{{donor.pk}}</td>
+															<td>{{donor.name}}</td>
+															<td>{{donor.email}}</td>
+															<td>{{donor.amount}}</td>
+															<td></td>
+														</tr>
+													{% endfor %}
+												</tbody>
+											</table>
+										
+									</div><!-- Question Answer -->
+								</div><!-- Content -->
+						<!-- Otherwise it will be vounteerform -->
+						{% elif form %}
+							<div class="content">
+									<div class="card-title">
+										<h5>Please Fill The following form to become an active volunteer of our organization</h5>
+									</div><!-- Medication Question Title -->
+									
+									<div class="card-text">
+										<form class="form form-horizontal" action="" method="post">
+											{% csrf_token %}
+											{% bootstrap_form form %}
+											{% buttons %}
+												<button class="btn btn-primary" type="submit">{% bootstrap_icon "star" %}Submit Request</button>
+											{% endbuttons %}
+										</form>
+									</div><!-- Question Answer -->
+								</div><!-- Content -->
+						{% elif thank_you %}
+							<div class="content">
+									<div class="card-title">
+										<h5>Thank You For Showing Interest in Our Mutual Cause of Animal</h5>
+									</div><!-- Medication Question Title -->
+									
+									<div class="card-text">
+										<div class="thank you ">
+											<h5>&#10004; Thank You for Showing Interest</h5>
+											<p>
+												We will reach you soon over the phone, till then stay healthy.
+											</p>
+										</div>
+									</div><!-- Question Answer -->
+								</div><!-- Content -->	
+						{% endif %}
+					</div><!-- The Medication Content -->
+				</div><!-- The Card -->
+			</div><!-- Medication Content -->
+			<div class="col-md-2">
+				
+			</div><!-- Right Sidebar Content -->
+		</div><!-- Medication Row -->
+	</div><!-- Medication Contents -->	
+</section>
+{% endblock pageContent %}

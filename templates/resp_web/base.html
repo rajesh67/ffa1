@@ -1,0 +1,76 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Friends For Animal</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="{{MEDIA_URL}}favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"><!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'screen_layout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'screen_layout_large.css' %}">
+  <link rel="stylesheet" type="text/css" media="only screen and (minimum-width:50px) and (maximum-width:500px)" href="{% static 'screen_layout_small.css' %}">
+  <link rel="stylesheet" type="text/css" media="only screen and (minimum-width:501px) and (maximum-width:900px)" href="{% static 'screen_layout_medium.css' %}">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6" id="logo_col">
+        <a href="#" class="logo"></a>
+      </div><!-- Col-LG-6 -->
+
+      <div class="col-lg-6" id="social_col">
+        <div class="container">
+          <ul>
+            <li>
+              <a href="https://twitter.com/Friends4animal?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Friends4animal</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8" style="margin-left: -20%;"></script>
+            </li><!-- TWITTER BUTTON -->
+            <li>
+              <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FFriendsforanimal%2F&width=400&layout=button&action=like&size=large&show_faces=true&share=true&height=65&appId" width="400" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </li><!-- /FACEBOOK BUTTONS -->
+          </ul>
+        </div><!--social links section -->
+      </div><!-- SOCIAL BUTTONS -->
+    </div>
+  </div>
+</header>
+<!-- HEADER -->
+<nav>
+  
+</nav>
+<!-- NAVBAR -->
+
+<section>
+  
+</section>
+<!-- HELPLINES AND AWARENESS IMAGE -->
+
+
+<section>
+  
+</section>
+<!-- Page Section -->
+
+<footer>
+  
+</footer>
+<!-- FOOTER -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

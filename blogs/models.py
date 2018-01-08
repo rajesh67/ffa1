@@ -7,7 +7,10 @@ from django.contrib.auth.models import *
 # Create your models here.
 
 class Article(models.Model):
-	title=models.CharField(max_length=250)
+	title=models.CharField(max_length=500)
+	subtitle=models.CharField(max_length=250)
+	cover_image=models.ImageField(upload_to='uploads/blogs/', default="/media/images/fbook.png")
+	background_image=models.ImageField(upload_to='uploads/blogs/', default="/media/images/fbook.png")
 	text=models.TextField()
 	pub_date=models.DateTimeField()
 	user=models.ForeignKey(User, on_delete=models.CASCADE)

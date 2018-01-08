@@ -86,16 +86,18 @@ WSGI_APPLICATION = 'friends_for_animals.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddr2581r4h5hnf',
+        'USER':'wlkrxinyootjlc',
+        'PASSWORD':'73f69e4c30357e6368c179273ddef750103b7934d714d0fd58880cf7c98b67aa',
+        'HOST':'ec2-174-129-195-73.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
 }
 
 # Update database configuration with $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(dj_database_url.config(
-        default=config('DATABASE_URL')
-    ))
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

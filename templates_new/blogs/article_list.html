@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block buttons %}
+
+{% endblock buttons %}
+
+
+{% block pageContent %}
+<section class="page_content" data-spy="scroll" data-target="#navbar-main" data-offset="0">
+	<!-- Medicatio Contents -->
+	<div class="container" id="content">
+		<div class="row">
+			<div class="col-md-1">
+				
+			</div><!-- Left Side Bar -->
+			<div class="col-md-10">
+				<div class="card">
+					<div class="card-header" style="font-size: 1.1em; text-transform: uppercase; background-color: #a6430a; color: #fff;">
+						<h4>Recent Blogs/Articles</h4>
+					</div><!-- Card Header -->
+					<div class="card-body">
+							{% for article in object_list %}
+							<div class="content" style=" margin: 10px 0px; padding: 10px 0px;">
+								<div class="card-title" style="border-bottom: solid #000 1px;">
+									<h5><a href="{% url 'article-detail' article.pk %}#content" style="text-transform: uppercase;text-decoration: none; color: #a6430a;"> {{article.title}} </a></p>
+								</div><!-- Card Title -->
+								<div class="card-text">
+									<p>{{article.text|safe|truncatechars:500 }} <a href="{% url 'article-detail' article.pk %}#content" style="text-transform: uppercase; text-decoration: none; color: #a6430a;">read more</a></p>
+								</div><!-- Card Text -->
+							</div><!-- Contents -->
+						{% endfor %}
+					
+					</div><!-- The Medication Content -->
+				</div><!-- The Card -->
+			</div><!-- Medication Content -->
+			<div class="col-md-1">
+				
+			</div><!-- Right Sidebar Content -->
+		</div><!-- Medication Row -->
+	</div><!-- Medication Contents -->	
+</section>
+{% endblock pageContent %}

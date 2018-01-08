@@ -9,6 +9,8 @@ CAT_CHOICES=(
 	('1', 'Medication/Sponse'),
 	('2', 'Adoption'),
 	('3', 'Donation'),
+	('4', 'About US'),
+	('5', 'Contact US'),
 )
 
 class Category(models.Model):
@@ -32,3 +34,13 @@ class Donor(models.Model):
 
 	def __str__(self):
 		return self.name
+
+class Volunteer(models.Model):
+	full_name=models.CharField(max_length=100)
+	email=models.EmailField(max_length=100)
+	profession=models.CharField(max_length=100)
+	phone_no=models.CharField(max_length=13)
+	nationality=models.CharField(max_length=50)
+
+	def __str__(self):
+		return self.full_name

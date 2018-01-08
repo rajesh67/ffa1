@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% block buttons %}
+
+{% endblock buttons %}
+
+
+{% block pageContent %}
+<section class="page_content" data-spy="scroll" data-target="#navbar-main" data-offset="0">
+
+	<!-- Medicatio Contents -->
+	<div class="container" id="content">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="container">
+					<div class="row">
+						
+					</div><!-- Row -->
+				</div><!-- Container -->
+			</div><!-- Left Side Bar -->
+			<div class="col-md-8">
+				<div class="card">
+					<div class="card-header" style="font-size: 1.1em; text-transform: uppercase; background-color: #a6430a; color: #fff;">
+						<h4>{{title}}</h4>
+					</div><!-- Card Header -->
+					<div class="card-body" style="border-bottom: solid #000 1px;">
+						<div class="card-title text-center">
+							<h5 style="text-transform: uppercase; font-size: 1.2em; font-weight: bold;">HELPING HAND</h5>
+						</div><!-- Card Center -->
+						<div class="card-text">
+							<img src="{{MEDIA_URL}}/images/helping_hand.jpg" class="img-fluid" style="">
+						</div><!-- Card Text -->
+					</div><!-- The Card Body -->
+
+					<!-- 2 -->
+					<div class="card-body" style="border-bottom: solid #000 1px;">
+						<div class="card-title text-center">
+							<h5 style="text-transform: uppercase; font-size: 1.2em; font-weight: bold;">AWARENESS PROGRAM</h5>
+						</div><!-- Card Center -->
+						<div class="card-text">
+							<img src="{{MEDIA_URL}}/images/awareness.jpg" class="img-fluid" style="">
+						</div><!-- Card Text -->
+					</div><!-- The Card Body -->
+
+					<!-- 3 -->
+					<div class="card-body" style="border-bottom: solid #000 1px;">
+						<div class="card-title text-center">
+							<h5 style="text-transform: uppercase; font-size: 1.2em; font-weight: bold;">Campaign</h5>
+						</div><!-- Card Center -->
+						<div class="card-text" style="">
+							<img src="{{MEDIA_URL}}/images/campaign.jpg" class="img-fluid" style="">
+						</div><!-- Card Text -->
+					</div><!-- The Card Body -->
+
+				</div><!-- The Card -->
+			</div><!-- Medication Content -->
+			<div class="col-md-2">
+				<img src="http://www.idaindia.org/images/volunteer_header.gif" class="img-fluid" style="">
+				<p class="card-title" style="">It's not just funds and homes that our dear animals need. You can contribute your time and energy to bring about a difference.</p>
+					<p class="btn" style="border-radius: 5px; border: solid #a6430a 2px;"><a class="card-text" href="{% url 'volunteers' %}#content" style="text-decoration: none; text-transform: uppercase;">Signup Here</a></p>
+			</div><!-- Right Sidebar Content -->
+		</div><!-- Medication Row -->
+	</div><!-- Medication Contents -->	
+</section>
+{% endblock pageContent %}

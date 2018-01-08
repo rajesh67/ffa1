@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block buttons %}
+
+{% endblock buttons %}
+
+{% block pageContent %}
+<section id="home_page" style="margin: 10px auto;">
+
+	<!-- The Initiatives container -->
+	<div class="container" id="initiatives">
+		<div class="card">
+			<div class="card-header text-center" style="background-color: #fff; text-transform: uppercase; border-bottom: none;">
+				<h3>Our Initiatives</h3>
+			</div><!-- Card  -->
+			<div class="card-body">
+				<div class="content">
+					<div class="row" id="initiatives">
+						<div class="col-md-4">
+							<div class="inner text-center">
+								<a href="{% url 'medications' %}#content">
+									<img src="{{MEDIA_URL}}images/medication.png" class="circle img-fluid" width="50%">
+								</a>
+								<div class="clear-fix" style="padding-bottom: 20px;"></div>
+								<h5 style="text-transform: uppercase;">Animal Medication</h5>
+								<p>Please contact us if you find any stray animal in bad condition, we will rescue them</p>
+							</div><!-- Inner -->
+						</div><!-- First Column -->
+						<div class="col-md-4">
+							<div class="inner text-center">
+								<a href="{% url 'adoptions' %}#content">
+									<img src="{{MEDIA_URL}}images/adoption_new.png" class="circle img-fluid" width="50%">
+								</a>
+								<div class="clear-fix" style="padding-bottom: 15px;"></div>
+								<h5 style="text-transform: uppercase;">Pet Adoption</h5>
+								<p>Our animals need their parents, where they can be treated like a child. Where they can get the love they deserve</p>
+							</div><!-- Inner -->
+						</div><!-- Second Column -->
+						<div class="col-md-4">
+							<div class="inner text-center">
+								<a href="{% url 'donations' %}#content">
+									<img src="{{MEDIA_URL}}images/donation_new.png" class="circle img-fluid" width="50%">
+								</a>
+								<div class="clear-fix" style="padding-bottom: 15px;"></div>
+								<h5 style="text-transform: uppercase;">Support this Cause</h5>
+								<p>Please support our mutual cause,it's our moral responsibility to protect our ancestors</p>
+							</div><!-- Inner -->
+						</div><!-- Third Column -->
+					</div><!-- Row -->
+				</div><!-- Content -->
+			</div><!-- Card Body -->
+		</div><!-- The Card -->
+	</div><!-- Initiative Container -->
+
+	<div class="container" style="margin: 10px auto;">
+		<div class="card" style="background-color: #fff;">
+			<div class="card-header text-center" style="background-color: #fff; border-bottom: none; text-transform: uppercase; font-weight: bold; font-color: #fff;">
+				<h4>Our Programs</h4>
+			</div><!-- Card Header -->
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="content">
+							<div class="text-center" style="text-transform: uppercase; font-weight: bold; font-size: 120%;">
+								Helping Hand
+							</div>
+							<div class="image text-center">
+								<img src="{{MEDIA_URL}}images/helping_hand.jpg" class="img-fluid rounded" style="">
+							</div><!--  -->
+						</div><!-- Content -->
+					</div><!-- The Helping Hand -->
+					<div class="col-md-4">
+						<div class="content">
+							<div class="text-center" style="text-transform: uppercase; font-weight: bold; font-size: 120%;">
+								Awareness
+							</div>
+							<div class="image text-center">
+								<img src="{{MEDIA_URL}}images/awareness.jpg" class="img-fluid rounded" style="">
+							</div><!--  -->
+						</div><!-- Content -->
+					</div><!-- The Awareness Program -->
+					<div class="col-md-4">
+						<div class="content">
+							<div class="text-center" style="text-transform: uppercase; font-weight: bold; font-size: 120%;">
+								Campaigning
+							</div>
+							<div class="image text-center">
+								<img src="{{MEDIA_URL}}images/campaign.jpg" class="img-fluid rounded" style="">
+							</div><!--  -->
+						</div><!-- Content -->
+					</div><!-- The Campaign Programs -->
+				</div><!-- The 3 items row -->
+			</div><!-- Card Body -->
+		</div><!-- Programs Card -->	
+	</div><!-- The Programs Container -->
+
+	
+</section><!-- Home Page Content -->
+{% endblock pageContent %}

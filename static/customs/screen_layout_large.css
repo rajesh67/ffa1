@@ -1,0 +1,211 @@
+/*Global Rules for all sizes*/
+
+body{
+	margin: 0;
+	padding:0;	
+}
+
+/*header{
+	border-bottom: solid #a6430a 50px;	
+}
+
+header a.logo{
+	display: block;
+	position: relative;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	
+}*/
+
+nav {
+ width : 100%;
+ display: block;
+ position: absolute;
+ background-color:#a6430a;
+ font-size: 1em;
+ font-weight: bold;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+nav a{
+	color:#fff;
+}
+
+nav a:hover{
+	color: #CC0;
+}
+
+nav a .active{
+	background-color: #000;
+	color: #000;
+}
+
+/* Layout Large Screens*/
+
+header .social{
+	margin: 0px 1%;
+	width: 40%;
+	float: right;
+	padding:10px auto;
+	/*font-size: 70%;*/
+	font-size: 1em;
+}
+
+header ul{
+	list-style: none;
+	display: block;
+}
+
+#helpline_section{
+	margin: 10px auto;
+	text-align: center;
+}
+
+#buttons{
+	margin-top: -50px;
+}
+
+#buttons div{
+	width:25%;
+	float: right;
+	margin: auto 10px;
+}
+
+#buttons a img:hover{
+	border-radius: 100%;
+	border: solid #a23609 2px;
+}
+
+section .donation{
+	text-align: center;
+}
+
+#donate_btn{
+	display: block;
+}
+
+#donor_btn{
+	display: table;
+	height: 100px;
+	width: 80%;
+	margin: auto;
+	padding: 50px auto 50px auto;
+}
+
+#donor_btn .inner{
+	display: table-cell;
+	vertical-align: middle;
+	max-width: none;
+	width: 100%;
+}
+
+#donor_btn .inner .content{
+	max-width: 500px;
+	text-align: center;
+	margin: 0px auto;
+	font-color: #FC6;
+	font-size:1.1em;
+}
+
+#donor_btn .inner .content .btn{
+	text-transform: uppercase;
+	text-decoration:none;
+	padding: 10px 20px;
+	border: solid #C00 3px;
+	border-radius: 9px;
+	margin: auto 5px;
+	padding: auto 10px;
+	display: block;
+	color: #C00;
+}
+
+.navbar-toggler{
+	text-transform: uppercase;
+}
+
+#donor_btn .inner .content .btn:hover{
+	color:#C00;
+	border: solid #C00 4px;
+}
+
+footer{
+	margin: 50px auto 0px auto;
+}
+
+footer .container{
+	font-size: 0.85em; color:#9ba0bd; background-color:#595a62; padding: 10px 10px 10px 0px;
+	margin: 0px;
+	padding: 50px auto;
+}
+
+footer .container .nav{
+	font-size:0.9em;
+	text-transform: uppercase;
+}
+
+footer .container .nav a{
+	color: #fff;
+}
+
+div.col-sm-4 div.chat_btn{
+	position: absolute;
+	top:60%;
+	right:10%;
+	text-align: right;
+	horizontal-align:right;
+}
+
+#fbtn{
+	background-image: url(../media/images/fbook.png);
+	background-position: 10px 2px;
+	background-size: 50px 40px;
+	background-repeat: no-repeat;
+	padding: 10px 70px;
+	margin:10px 0px;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 9px;
+	border: solid #a23609 2px;
+}
+
+#tbtn{
+	background-image: url(../media/images/twitter.png);
+	background-position: 10px 2px;
+	background-size: 50px 40px;
+	background-repeat: no-repeat;
+	padding: 10px 70px;
+	margin:0px 0px;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 9px;
+	border: solid #a23609 2px;
+}
+
+
+div.col-md-4.button_div{
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	background-position: 0px 0px;
+}
+
+div.col-md-4.button_div .content{
+	padding: 0px 0px 0px 100px;
+}
+
+.button_div.medication{
+	background-image: url(/media/images/medication.png);
+}
+
+.button_div.adoption{
+	background-image: url(/media/images/adoption_new.png);
+}
+
+.button_div.donation{
+	background-image: url(/media/images/donation_new.png);
+}
+
+div#initiatives div div img:hover{
+	border-radius: 100px;
+	border: solid #a23609 3px;
+}
