@@ -25,7 +25,7 @@ SECRET_KEY = 'f1xww0&1t9@3$u3zg4-cf-ocmi%lyr$!ctxwo$5d4-03%!hz1='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'friends-for-animal.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*', 'friends-for-animal.herokuapp.com', '127.0.0.1', 'localhost','http://159.89.172.44']
 
 
 # Application definition
@@ -83,13 +83,23 @@ WSGI_APPLICATION = 'friends_for_animals.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ffadb',
+        'USER':'ffaadmin',
+        'PASSWORD':'raju@11cs30025',
+        'HOST':'localhost',
+        'PORT':'',
     }
 }
-
 
 
 
