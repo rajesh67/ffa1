@@ -155,7 +155,6 @@ div.col-sm-4 div.chat_btn{
 }
 
 #fbtn{
-	background-image: url(../media/images/fbook.png);
 	background-position: 10px 2px;
 	background-size: 50px 40px;
 	background-repeat: no-repeat;
@@ -168,7 +167,7 @@ div.col-sm-4 div.chat_btn{
 }
 
 #tbtn{
-	background-image: url(../media/images/twitter.png);
+
 	background-position: 10px 2px;
 	background-size: 50px 40px;
 	background-repeat: no-repeat;
@@ -192,15 +191,15 @@ div.col-md-4.button_div .content{
 }
 
 .button_div.medication{
-	background-image: url(/media/images/medication.png);
+	
 }
 
 .button_div.adoption{
-	background-image: url(/media/images/adoption_new.png);
+	
 }
 
 .button_div.donation{
-	background-image: url(/media/images/donation_new.png);
+	
 }
 
 div#initiatives div div img:hover{
