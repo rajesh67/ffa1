@@ -134,9 +134,7 @@ footer{
 }
 
 footer .container{
-	font-size: 0.85em; color:#9ba0bd; background-color:#595a62; padding: 10px 10px 10px 0px;
-	margin: 0px;
-	padding: 50px auto;
+	font-size: 0.85em; color:#9ba0bd; background-color:#595a62; 
 }
 
 footer .container .nav{
